@@ -88,9 +88,9 @@ function update() {
             }
             context.drawImage(alienImg, alien.x, alien.y, alien.width, alien.height);
             
-            if (alien.y >= ship.y) {
-                gameOver = true;
-            }
+            context.fillStyle = "white";
+            context.font = "16px courier";
+            context.fillText(score, 5, 20);
         }
     }
 
@@ -123,11 +123,6 @@ function update() {
         bulletArray = [];
         createAliens();
     }
-
-    context.fillStyle = "white";
-    context.font = "16px courier";
-    context.fillText(score, 5, 20);
-
 }
 
 function moveShip (e) {
